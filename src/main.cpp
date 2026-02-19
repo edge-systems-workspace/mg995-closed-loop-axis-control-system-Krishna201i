@@ -13,19 +13,13 @@
 #include <Servo.h>
 
 Servo myServo;
-
-
-
 void setup() {
 
-    // TODO 4:
-    // Initialize Serial communication (9600 baud)
+    Serial.begin(9600);
 
-    // TODO 5:
-    // Attach servo to PWM pin
+    myServo.attach(11);
 
-    // TODO 6:
-    // Print system initialization message
+    Serial.println("Servo initiate");
 }
 
 void loop() {
