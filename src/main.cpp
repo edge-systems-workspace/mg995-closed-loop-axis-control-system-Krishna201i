@@ -24,17 +24,22 @@ void setup() {
 
 void loop() {
 
-    // TODO 7:
-    // Check if Serial data is available
+    for (int i = 0; i <= 180; i += 10) {
+        myServo.write(i);
 
-    // TODO 8:
-    // Read integer angle input from Serial
+        Serial.print("Servo Angle: ");
+        Serial.println(i);
 
-    // TODO 9:
-    // Validate angle range (0–180)
-    // If valid → move servo
-    // If invalid → print error message
+        delay(500);
+    }
 
-    // TODO 10:
-    // Print confirmation message after movement
+    for (int i = 180; i >= 0; i -= 10) {
+        myServo.write(i);
+
+        Serial.print("Servo Angle: ");
+        Serial.println(i);
+
+        delay(500);
+    }
+
 }
